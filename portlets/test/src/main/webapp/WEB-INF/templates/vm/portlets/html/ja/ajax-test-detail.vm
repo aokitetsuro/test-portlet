@@ -20,7 +20,7 @@
 ## ---------------------------------------------------------------------------
 #set ($indicator_id = "indicator-dlg-")
 ## ---------------------------------------------------------------------------
-#ALdialogheader("Test詳細")
+#ALdialogheader("ブックマーク詳細")
 #ALajaxIndicator("$indicator_id" "$!portlet.ID" "")
 <div id="messageDiv"></div>
 #ALajaxdetailformheader("ToDo")

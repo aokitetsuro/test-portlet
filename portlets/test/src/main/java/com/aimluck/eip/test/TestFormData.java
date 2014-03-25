@@ -93,6 +93,9 @@ public class TestFormData extends ALAbstractFormData {
 
   /** メモ */
   private ALStringField note;
+  
+  /** URL */
+  private ALStringField url;
 
   /** 開始日 */
 //  private ALDateField start_date;
@@ -222,6 +225,10 @@ public class TestFormData extends ALAbstractFormData {
     note = new ALStringField();
     note.setFieldName(ALLocalizationUtils.getl10n("TODO_SETFIELDNAME_MEMO"));
     note.setTrim(false);
+    // URL
+    url = new ALStringField();
+    url.setFieldName("URL");
+    url.setTrim(true);
     // 開始日
 //    start_date = new ALDateField();
 //    start_date.setFieldName(ALLocalizationUtils
@@ -414,6 +421,8 @@ public class TestFormData extends ALAbstractFormData {
 //      priority.setValue(test.getPriority().longValue());
       // メモ
       note.setValue(test.getNote());
+      // URL
+      url.setValue(test.getUrl());
       // 公開区分
 //      public_flag.setValue(test.getPublicFlag());
 
@@ -523,6 +532,8 @@ public class TestFormData extends ALAbstractFormData {
 //      test.setPriority(Short.valueOf((short) priority.getValue()));
       // メモ
       test.setNote(note.getValue());
+      // URL
+      test.setUrl(url.getValue());
       // 公開区分
 //      test.setPublicFlag(public_flag.getValue());
 //      test.setAddonScheduleFlg(addon_schedule_flg.getValue());
@@ -841,6 +852,15 @@ public class TestFormData extends ALAbstractFormData {
     return note;
   }
 
+  /**
+   * URLを取得します。 <BR>
+   *
+   * @return
+   */
+  public ALStringField getUrl() {
+    return url;
+  }
+  
   /**
    * 優先度を取得します。 <BR>
    *
