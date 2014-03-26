@@ -482,6 +482,7 @@ public class TestSelectData extends
 //      rd.setPriorityString(TestUtils.getPriorityString(record
 //        .getPriority()
 //        .intValue()));
+      rd.setUrl(record.getUrl());
       rd.setUpdateDate(record.getUpdateDate());
 
       // 公開/非公開を設定する．
@@ -567,6 +568,7 @@ public class TestSelectData extends
 //        .getPriority()
 //        .intValue()));
       rd.setNote(record.getNote());
+      rd.setUrl(record.getUrl());
 //      rd.setCreateUserName(ALEipUtils
 //        .getALEipUser(record.getCreateUserId())
 //        .getAliasName()

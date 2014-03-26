@@ -735,6 +735,8 @@ public class TestFormData extends ALAbstractFormData {
 //      test.setPriority(Short.valueOf((short) priority.getValue()));
       // メモ
       test.setNote(note.getValue());
+      // URL
+      test.setUrl(url.getValue());
       // 公開区分
 //      test.setPublicFlag(public_flag.getValue());
 //      test.setAddonScheduleFlg(addon_schedule_flg.getValue());
