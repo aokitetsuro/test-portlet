@@ -483,10 +483,11 @@ public class TestSelectData extends
 //        .getPriority()
 //        .intValue()));
       rd.setUrl(record.getUrl());
+      rd.setUrlList(record.getUrl(), record.getUrl(), "http://capture.heartrails.com/free?" + record.getUrl());
       rd.setUpdateDate(record.getUpdateDate());
 
       // 公開/非公開を設定する．
-//      rd.setPublicFlag("T".equals(record.getPublicFlag()));
+      rd.setPublicFlag("T".equals(record.getPublicFlag()));
       // 期限状態を設定する．
 //      rd.setLimitState(TestUtils.getLimitState(record.getEndDate()));
 
@@ -569,12 +570,13 @@ public class TestSelectData extends
 //        .intValue()));
       rd.setNote(record.getNote());
       rd.setUrl(record.getUrl());
+      rd.setUrlList(record.getUrl(), record.getUrl(), "http://caputure.heartrails.com/free?" + record.getUrl());
 //      rd.setCreateUserName(ALEipUtils
 //        .getALEipUser(record.getCreateUserId())
 //        .getAliasName()
 //        .getValue());
       // 公開/非公開を設定する．
-//      rd.setPublicFlag("T".equals(record.getPublicFlag()));
+      rd.setPublicFlag("T".equals(record.getPublicFlag()));
 //      rd.setAddonScheduleFlg("T".equals(record.getAddonScheduleFlg()));
       rd.setCreateDate(ALDateUtil
         .format(record.getCreateDate(), "yyyy年M月d日(E)"));

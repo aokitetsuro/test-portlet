@@ -9,6 +9,7 @@ public class _EipTTest extends org.apache.cayenne.CayenneDataObject {
 
     public static final String CREATE_DATE_PROPERTY = "createDate";
     public static final String NOTE_PROPERTY = "note";
+    public static final String PUBLIC_FLAG_PROPERTY = "publicFlag";
     public static final String TEST_NAME_PROPERTY = "testName";
     public static final String UPDATE_DATE_PROPERTY = "updateDate";
     public static final String URL_PROPERTY = "url";
@@ -30,6 +31,14 @@ public class _EipTTest extends org.apache.cayenne.CayenneDataObject {
     }
     public String getNote() {
         return (String)readProperty("note");
+    }
+    
+    
+    public void setPublicFlag(String publicFlag) {
+        writeProperty("publicFlag", publicFlag);
+    }
+    public String getPublicFlag() {
+        return (String)readProperty("publicFlag");
     }
     
     

@@ -20,6 +20,8 @@
 package com.aimluck.eip.test;
 
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.aimluck.commons.field.ALDateTimeField;
 import com.aimluck.commons.field.ALNumberField;
@@ -69,9 +71,12 @@ public class TestResultData implements ALData {
   
   /** URL */
   private ALStringField url;
+  
+  /** URL リスト */
+  private List<String> urllist;
 
   /** 公開/非公開フラグ */
-//  private boolean is_public;
+  private boolean is_public;
 
   /** スケジュール表示フラグ */
 //  private boolean addon_schedule_flg;
@@ -127,6 +132,10 @@ public class TestResultData implements ALData {
     note.setTrim(false);
     url = new ALStringField();
     url.setTrim(true);
+    urllist = new ArrayList<String>();
+    urllist.add(0, "");
+    urllist.add(1, "");
+    urllist.add(2, "");
 //    start_date = new ALStringField();
 //    end_date = new ALStringField();
 //    priority_image = new ALStringField();
@@ -137,7 +146,7 @@ public class TestResultData implements ALData {
     update_date = new ALDateTimeField();
 //    limit_state = new ALNumberField();
 //    create_user_name = new ALStringField();
-//    is_public = true;
+    is_public = true;
 //    addon_schedule_flg = true;
     is_self_test = false;
   }
@@ -258,6 +267,10 @@ public class TestResultData implements ALData {
     return ALEipUtils.getMessageList(url.getValue());
   }
   
+  public List<String> getUrlList() {
+    return urllist;
+  }
+  
   /**
    * @return
    */
@@ -270,9 +283,9 @@ public class TestResultData implements ALData {
    *
    * @return
    */
-//  public boolean isPublic() {
-//    return is_public;
-//  }
+  public boolean isPublic() {
+    return is_public;
+  }
 
   /**
    * @param string
@@ -288,12 +301,18 @@ public class TestResultData implements ALData {
     url.setValue(string);
   }
   
+  public void setUrlList(String str1, String str2, String str3){
+    urllist.set(0, str1);
+    urllist.set(1, str2);
+    urllist.set(2, str3);
+  }
+  
   /**
    * @return
    */
-//  public void setPublicFlag(boolean bool) {
-//    is_public = bool;
-//  }
+  public void setPublicFlag(boolean bool) {
+    is_public = bool;
+  }
 
   /**
    * @param string
